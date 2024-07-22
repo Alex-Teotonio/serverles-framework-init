@@ -37,6 +37,12 @@ functions:
       - httpApi:
           path: /product
           method: POST
+  listProducts:
+    handler: src/functions/listProducts.handler
+    events:
+      - httpApi:
+          path: /products
+          method: GET
 resources:
   Resources:
     ProductsTable:
