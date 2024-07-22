@@ -8,6 +8,7 @@ service: apisls
 provider:
   name: aws
   runtime: nodejs20.x
+  memorySize: 128
 plugins:
   - serverless-offline
 functions:
