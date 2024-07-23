@@ -43,12 +43,18 @@ functions:
       - httpApi:
           path: /products
           method: GET
-deleteProduct:
-  handler: src/functions/deleteProduct.handler
-  events:
-    - httpApi:
-        path: /products/{productId}
-        method: DELETE
+  deleteProduct:
+    handler: src/functions/deleteProduct.handler
+    events:
+      - httpApi:
+          path: /products/{productId}
+          method: DELETE
+  updateProduct:
+    handler: src/functions/updateProduct.handler
+    events:
+      - httpApi:
+          path: /products/{productId}
+          method: PUT
 resources:
   Resources:
     ProductsTable:
